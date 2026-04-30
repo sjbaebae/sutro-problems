@@ -20,19 +20,27 @@ cost = matmul.score_16x16(ir)
 
 ir = matmul.generate_tiled_16x16()       # 4×4 scratchpad-cached tiles
 cost = matmul.score_16x16(ir)
+
+ir = matmul.generate_outer_product_4x4()    # 4×4 outer product, size-1 sA
+cost = matmul.score_4x4(ir)
+
+ir = matmul.generate_hierarchical_16x16()   # 16×16 hierarchical asym. reload
+cost = matmul.score_16x16(ir)
 ```
 
 
 ## 4×4 Record History
 
-| #  | Cost  | Description                         | Date       | IR                                          | Contributors |
-| -  | -:    | -                                   | -          | -                                           | -            |
-| 1  | 1,316 | `generate_baseline_4x4` (naive)     | 2026-04-29 | [`ir/baseline_4x4.ir`](ir/baseline_4x4.ir)  | [@yaroslavvb](https://github.com/yaroslavvb) |
+| #  | Cost  | Description                              | Date       | IR                                                   | Contributors |
+|----|------:|------------------------------------------|------------|------------------------------------------------------|--------------|
+| 1  | 1,316 | `generate_baseline_4x4` (naive)          | 2026-04-29 | [`ir/baseline_4x4.ir`](ir/baseline_4x4.ir)           | [@yaroslavvb](https://github.com/yaroslavvb) |
+| 2  |   800 | `generate_outer_product_4x4` (size-1 sA) | 2026-04-30 | [`ir/outer_product_4x4.ir`](ir/outer_product_4x4.ir) | [@sjbaebae](https://github.com/sjbaebae) |
 
 ## 16×16 Record History
 
-| #  | Cost    | Description                         | Date       | IR                                                 | Contributors |
-| -  | -:      | -                                   | -          | -                                                  | -            |
-| 1  | 340,704 | `generate_baseline_16x16` (naive)   | 2026-04-29 | [`ir/baseline_16x16.ir`](ir/baseline_16x16.ir)     | [@yaroslavvb](https://github.com/yaroslavvb) |
-| 2  | 133,783 | `generate_tiled_16x16` (4×4 tiles)  | 2026-04-29 | [`ir/tiled_16x16.ir`](ir/tiled_16x16.ir)           | [@yaroslavvb](https://github.com/yaroslavvb) |
-| 3  | 110,743 | `generate_tiled_16x16_opt1` (tmp@1) | 2026-04-30 | [`ir/tiled_16x16_opt1.ir`](ir/tiled_16x16_opt1.ir) | [@SethTS](https://github.com/SethTS) |
+| #  | Cost    | Description                                  | Date       | IR                                                     | Contributors |
+|----|--------:|----------------------------------------------|------------|--------------------------------------------------------|--------------|
+| 1  | 340,704 | `generate_baseline_16x16` (naive)            | 2026-04-29 | [`ir/baseline_16x16.ir`](ir/baseline_16x16.ir)         | [@yaroslavvb](https://github.com/yaroslavvb) |
+| 2  | 133,783 | `generate_tiled_16x16` (4×4 tiles)           | 2026-04-29 | [`ir/tiled_16x16.ir`](ir/tiled_16x16.ir)               | [@yaroslavvb](https://github.com/yaroslavvb) |
+| 3  | 110,743 | `generate_tiled_16x16_opt1` (tmp@1)          | 2026-04-30 | [`ir/tiled_16x16_opt1.ir`](ir/tiled_16x16_opt1.ir)     | [@SethTS](https://github.com/SethTS) |
+| 4  |  80,217 | `generate_hierarchical_16x16` (asym. reload) | 2026-04-30 | [`ir/hierarchical_16x16.ir`](ir/hierarchical_16x16.ir) | [@sjbaebae](https://github.com/sjbaebae) |
