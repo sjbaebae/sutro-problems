@@ -1,0 +1,14 @@
+{
+  "qualified": false,
+  "passes": 1,
+  "runs": 3,
+  "accuracy_errors_pct": [
+    1.90818181818182,
+    2.0000000000000018,
+    1.883636363636365
+  ],
+  "median_ms": null,
+  "median_mj": null,
+  "github_action": "Push experimental branch with complete evidence; qualified PR115 unchanged; no record PR or leaderboard edits",
+  "prior_interrupted_attempt_disclosed": true
+}

@@ -1,0 +1,8 @@
+{
+  "qualified": false,
+  "selected_recipe": "Grokfast alpha.98/lambda.5, LR.4/1.5, student3000, input noise.04",
+  "official_status": "INCOMPLETE infrastructure failure; accuracy unknown",
+  "github_updated": false,
+  "qualified_fallback": "PR115 depthensemble remains unchanged",
+  "next_requirement": "A complete auditable three-run qualification is still required; retain and disclose this interrupted initial batch."
+}

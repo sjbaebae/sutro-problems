@@ -1,0 +1,30 @@
+{
+  "source_bytes": 20457,
+  "source_sha256": "aa028894701ef993382393307af1f7c4e4dd4505b1f329b268e5272eac05b4f7",
+  "archive_sha256": "6fba3f88b7a9da8a1a1839e9d7eff64e60f33f416ab2f41e0d126b5e34ad1d16",
+  "sources": {
+    "persistent_bf16_deep3_batchnorm16_staged_back128_ltsearch_head16_residual3_warmstart_featureaug_grokfast.py": "785c88a76cea313c77eb39eaf52359f5cae560408e7f56f26803623bf85e5692",
+    "kernels/persistent_bf16_deep3_batchnorm16_staged_back128_ltsearch_head16_residual3_warmstart_featureaug_grokfast.cu": "a95c68a7c9dbec6d03b60fac649a25cbacef34909ce3d87a32b68b3d0e10c562",
+    "kernels/mlp_batchnorm16_staged_back128.cuh": "2b1eb5118199a86e91607b8e79287ff57ee724d154c50bb3f646ff6ab80fe2e3",
+    "kernels/mlp_batchnorm16_staged_fastgain.cuh": "63bba0697c799cdef91b32ad388917e2cdcd68a0beb1a4a6bc5c263c8b0907d9",
+    "kernels/mlp_batchnorm16_staged.cuh": "66019448abf7936f4fbb87c8ccff02d34637c6fbdd8efe6af8ae21cf5d1aa23c",
+    "kernels/mlp_batchnorm16.cuh": "ecfcd2a7bf48c5ea6a3d457204c12e3b422246061c4bebdbed5edbeb6651fd27",
+    "kernels/persistent_bf16_deep3_batchnorm16_staged_back128_ltsearch_head16_residual3_warmstart_featureaug_grokfast_bindings.cpp": "2ea9d49e66b25cbd24ffd2f67914a7891a197a71d6e1e115c1ab727f5637d26e",
+    "kernels/persistent_bf16_deep3_batchnorm16_staged_back128_ltsearch_head16_residual3_warmstart_featureaug_grokfast.h": "7e1ba372b795b024d6864de7d9a6dad431665363e928d3afca06d3805223c944",
+    "persistent_bf16_deep3_batchnorm16_staged_back128.py": "3257fab8eac9647588ef0686096296358e84ccd7080be8f2c009c789a26b9ffd",
+    "kernels/persistent_bf16_deep3_batchnorm16_staged_back128.cu": "e82896d116d35118bcf9670ab65de9e599ea5cd0eec7fd9675596c95fb1a6879",
+    "kernels/persistent_bf16_deep3_batchnorm16_staged_back128_bindings.cpp": "3f9e3df1d8b8c09b80c8285daf7d503ed0d8ea64833591ba3f333e84fd53eee5",
+    "kernels/persistent_bf16_deep3_batchnorm16_staged_back128.h": "81392d5089c3bcbc92227bf2f667897e544353ce4156abc79b1d325e2a0a3342",
+    "learned_ridge_head.py": "4fd318f0abc1556e0e1eee44c2111fd083e9ff6c5ff7a26ea9b45411692ac169",
+    "kernels/learned_ridge_head.cu": "3487e082e1b232252ecc26de76023c214a51783512fca960a368f01148640cb0",
+    "kernels/learned_ridge_head_bindings.cpp": "3876c7f31cfef4eb51004d5250424eb25ce02a21684a00d6a85286af9671ba72",
+    "embedding_graph.py": "2e9032b0cecf1bc7c6464a366949dd941d2557b9f65db303e848f1b950991774",
+    "kernels/embedding_graph.cu": "10dc481e5b6e353ec4b0f7df4951b351e47544f445b4a7c65117778e82c22175",
+    "kernels/embedding_graph_bindings.cpp": "02b5442e6e68b602080858b19bfd26034230de923f3d5404bb72ffef3be7e50d",
+    "centered_halfnorm_small_members.py": "d730544cf75abf0888cf00d2622c4ba511760a25e718cf48b7bb04c3393f9f6d",
+    "kernels/centered_halfnorm_small_members.cu": "ea871ae01a765563a7bf7dfac7ddcc61b2dae0148028987b422b91544592e13d",
+    "kernels/centered_halfnorm_small_members_bindings.cpp": "4ec293b4922ec8cadce916a7d0a796bbf97ccb6804709dfac5cc3220a07f66bf",
+    "e.py": "d353148b25e3d51dc2b433720447edd0722246675a5c1394976198419efb04bf"
+  },
+  "scope": "Source-only packaging prototype; no full-wrapper or sandbox qualification"
+}

@@ -1,0 +1,94 @@
+{
+  "source": "/Users/sbae703/Research/cybertronai/sutro-problems/mnista100/submissions/mlp_bn_head16_d5_warmstart_grokfast_noise04.py",
+  "source_sha256": "aa028894701ef993382393307af1f7c4e4dd4505b1f329b268e5272eac05b4f7",
+  "runs": [
+    {
+      "run": 1,
+      "status": "FAIL",
+      "checks": {
+        "source": true,
+        "sandbox": true,
+        "band": true,
+        "complete": true,
+        "judge_matches": true,
+        "accuracy_and_protocol": false,
+        "energy": false,
+        "returncode": false
+      },
+      "error_pct": 1.90818181818182,
+      "calls": 15,
+      "ranked_ms": null,
+      "energy_mj": null,
+      "gpu_uuid": null,
+      "original_problems": [
+        "MNIST accuracy 98.092% (107,901/110,000); the band needs 107,910 correct"
+      ],
+      "independent_judge": {
+        "problems": [
+          "MNIST accuracy 98.092% (107,901/110,000); the band needs 107,910 correct"
+        ],
+        "ranked_ms": 3538.7944946289062,
+        "summary": "MNIST 98.09% (107,901/110,000), 3532.250 ms/call; hold-out (kmnist) 97.27%, 3538.794 ms/call"
+      }
+    },
+    {
+      "run": 2,
+      "status": "FAIL",
+      "checks": {
+        "source": true,
+        "sandbox": true,
+        "band": true,
+        "complete": true,
+        "judge_matches": true,
+        "accuracy_and_protocol": false,
+        "energy": false,
+        "returncode": false
+      },
+      "error_pct": 2.0000000000000018,
+      "calls": 15,
+      "ranked_ms": null,
+      "energy_mj": null,
+      "gpu_uuid": null,
+      "original_problems": [
+        "MNIST accuracy 98.000% (107,800/110,000); the band needs 107,910 correct"
+      ],
+      "independent_judge": {
+        "problems": [
+          "MNIST accuracy 98.000% (107,800/110,000); the band needs 107,910 correct"
+        ],
+        "ranked_ms": 3539.343439275568,
+        "summary": "MNIST 98.00% (107,800/110,000), 3539.343 ms/call; hold-out (fashion) 88.47%, 3539.008 ms/call"
+      }
+    },
+    {
+      "run": 3,
+      "status": "PASS",
+      "checks": {
+        "source": true,
+        "sandbox": true,
+        "band": true,
+        "complete": true,
+        "judge_matches": true,
+        "accuracy_and_protocol": true,
+        "energy": true,
+        "returncode": true
+      },
+      "error_pct": 1.883636363636365,
+      "calls": 15,
+      "ranked_ms": 3541.1724076704545,
+      "energy_mj": 964709.7423153551,
+      "gpu_uuid": "GPU-755053b7-9b5f-5315-7cf3-56ca966ecc31",
+      "original_problems": [],
+      "independent_judge": {
+        "problems": [],
+        "ranked_ms": 3541.1724076704545,
+        "summary": "MNIST 98.12% (107,928/110,000), 3541.172 ms/call; hold-out (fashion) 88.39%, 3536.121 ms/call"
+      }
+    }
+  ],
+  "three_distinct_devices": false,
+  "qualified": false,
+  "median_ms": null,
+  "median_mj": null,
+  "scope": "All initial three records retained; no qualifying median unless every independent run passes."
+}

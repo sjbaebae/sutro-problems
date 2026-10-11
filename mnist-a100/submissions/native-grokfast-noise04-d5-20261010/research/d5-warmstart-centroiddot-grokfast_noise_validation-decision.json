@@ -1,0 +1,19 @@
+{
+  "qualification": false,
+  "fixed_recipe": "Grokfast alpha.98 lambda.5, LR.4/1.5, 3000updates, raw noise .04",
+  "draws": 11,
+  "mean_error_pct": 1.8445454545454545,
+  "control_error_pct": 1.8172727272727272,
+  "paired_noise_delta_pp": 0.027272727272727237,
+  "paired_noise_delta_se_pp": 0.023820957506551367,
+  "noise_advantage_replicated": false,
+  "absolute_accuracy_below_1_90": true,
+  "next": "Frozen packaged recipe launched in three initial independent canonical sandbox evaluations; no GitHub update unless all pass.",
+  "pooled_22_research_draws": {
+    "noise_error_pct": 1.8354545454545454,
+    "consistent_zero_error_pct": 1.8322727272727273,
+    "paired_delta_pp": 0.0031818181818181646,
+    "paired_se_pp": 0.01465898603942488,
+    "scope": "Descriptive pooling; tuning draws included; not independent confirmation or qualification."
+  }
+}

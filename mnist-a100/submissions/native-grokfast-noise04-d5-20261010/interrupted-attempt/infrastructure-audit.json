@@ -1,0 +1,32 @@
+{
+  "qualified": false,
+  "app_id": "ap-11Covl3IisFrp18KxcSTFa",
+  "collector_exit_code": 120,
+  "collector_error": "OSError(28, 'No space left on device'); lost sys.stderr",
+  "app_system_log": "Stopping app - uncaught exception raised locally: OSError(28, No space left on device).",
+  "source_sha256": "aa028894701ef993382393307af1f7c4e4dd4505b1f329b268e5272eac05b4f7",
+  "observed_dashboard_calls": [
+    {
+      "container": "ta-01M4MEV9CBWJ6CZK2EH0AXNP0R",
+      "status": "Succeeded",
+      "execution": "11m36s",
+      "accuracy_status": "UNKNOWN; remote_score returning is not evidence of benchmark pass"
+    },
+    {
+      "container": "ta-01M4MEV9CBPFX2VDN2WGB1NN1R",
+      "status": "Succeeded",
+      "execution": "13m32s",
+      "accuracy_status": "UNKNOWN; remote_score returning is not evidence of benchmark pass"
+    },
+    {
+      "container": "ta-01M4MEV9KSBFTQA2905D132R4R",
+      "status": "Cancelled",
+      "accuracy_status": "UNKNOWN"
+    }
+  ],
+  "recovery": "Dashboard verified two completed calls and one cancelled. FunctionCall.get returned NotFoundError; complete original result records not recovered. App stopped; no live containers.",
+  "local_space_recovery": "Temporary clean PR worktree changed to sparse-checkout mnist-a100; about390MiB freed; submission bundle and git history preserved.",
+  "decision": "No qualification, median or GitHub update. No replacement evaluations launched. Interrupted original attempt retained.",
+  "research_validation_error_pct": 1.8445454545454545,
+  "noise_advantage_replicated": false
+}

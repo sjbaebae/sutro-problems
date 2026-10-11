@@ -1,0 +1,19 @@
+{
+  "source": "/Users/sbae703/Research/cybertronai/sutro-problems/mnista100/submissions/mlp_bn_head16_d5_warmstart_grokfast_noise04.py",
+  "source_sha256": "aa028894701ef993382393307af1f7c4e4dd4505b1f329b268e5272eac05b4f7",
+  "source_bytes": 20457,
+  "runs": 3,
+  "difficulty": 5,
+  "sandbox": true,
+  "all_initial_runs_retained": true,
+  "research_validation_error_pct": 1.8445454545454545,
+  "research_noise_advantage_replicated": false,
+  "package_gate": "results/d5-grokfast-noise04-package-gate-modal.json",
+  "package_changes": [
+    "unused initialization modes removed; kind7 Gaussian branch unchanged",
+    "unused scaling/rotation/masking augmentation removed; noise/projection retained",
+    "redundant internal fixed-configuration checks removed; tensor input contract retained",
+    "bounded cuBLASLt tuning and minimal ATen bindings",
+    "source-only archive; no weights or fitted data"
+  ]
+}

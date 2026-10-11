@@ -1,0 +1,143 @@
+{
+  "returncode": 1,
+  "stdout": "mlp_bn_head16_d5_warmstart_grokfast_noise04.py:classify at 1.90% error: 15 timed calls, each in a fresh process\n  review flag: embedded data? 1 high-entropy literal(s), 20,035 characters\n  review flag: decodes data: imports base64, lzma\n  review flag: 20,457 bytes, close to the 20,480-byte limit\n  NVIDIA A100-SXM4-80GB, torch 2.12.0+cu130, sandbox on\n  call  1/15: 3,536.760 ms, scorer's clock 3,540.121 ms\n  call  2/15: 3,535.682 ms, scorer's clock 3,539.685 ms\n  call  3/15: 3,530.744 ms, scorer's clock 3,533.582 ms\n  call  4/15: 3,524.998 ms, scorer's clock 3,527.790 ms\n  call  5/15: 3,550.964 ms, scorer's clock 3,553.984 ms\n  call  6/15: 3,549.529 ms, scorer's clock 3,552.695 ms\n  call  7/15: 3,552.369 ms, scorer's clock 3,555.651 ms\n  call  8/15: 3,529.458 ms, scorer's clock 3,532.532 ms\n  call  9/15: 3,530.388 ms, scorer's clock 3,533.171 ms\n  call 10/15: 3,545.230 ms, scorer's clock 3,547.736 ms\n  call 11/15: 3,526.501 ms, scorer's clock 3,529.578 ms\n  call 12/15: 3,537.535 ms, scorer's clock 3,540.449 ms\n  call 13/15: 3,543.816 ms, scorer's clock 3,546.646 ms\n  call 14/15: 3,545.193 ms, scorer's clock 3,548.313 ms\n  call 15/15: 3,549.642 ms, scorer's clock 3,554.087 ms\nMNIST 98.00% (107,800/110,000), 3539.343 ms/call; hold-out (fashion) 88.47%, 3539.008 ms/call\ndisqualified: MNIST accuracy 98.000% (107,800/110,000); the band needs 107,910 correct\n",
+  "stderr": "024 bytes smem, 392 bytes cmem[0]\nptxas info    : Compile time = 8.882 ms\n[2/3] c++ -MMD -MF centered_halfnorm_small_members_bindings.o.d -DTORCH_EXTENSION_NAME=sutro_centered_halfnorm_small_members_bn_stagepack -DTORCH_API_INCLUDE_EXTENSION_H -isystem /usr/local/lib/python3.13/site-packages/torch/include -isystem /usr/local/lib/python3.13/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /usr/local/include/python3.13 -fPIC -std=c++20 -O0 -g0 -c /tmp/sutro-6fba3f88b7a9da8a-65534/kernels/centered_halfnorm_small_members_bindings.cpp -o centered_halfnorm_small_members_bindings.o \n[3/3] c++ centered_halfnorm_small_members_bindings.o centered_halfnorm_small_members.cuda.o -shared -L/usr/local/lib/python3.13/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart -o sutro_centered_halfnorm_small_members_bn_stagepack.so\nLT tuned m=10 n=128 k=20000 at=1 bt=1 E=1 candidates=7 winner=0 id=23 tile=11 split=48 us=18.7733\nLT tuned m=4096 n=512 k=128 at=0 bt=0 E=4 candidates=8 winner=4 id=6 tile=18 split=1 us=34.1333\nLT tuned m=4096 n=512 k=512 at=0 bt=0 E=4 candidates=8 winner=0 id=6 tile=20 split=1 us=55.1253\nLT tuned m=4096 n=16 k=512 at=0 bt=1 E=4 candidates=6 winner=1 id=21 tile=5 split=1 us=17.3227\nLT tuned m=512 n=16 k=4096 at=1 bt=1 E=4 candidates=4 winner=2 id=31 tile=15 split=1 us=22.4427\nLT tuned m=4096 n=512 k=16 at=0 bt=0 E=4 candidates=4 winner=0 id=5 tile=24 split=1 us=22.6987\nLT tuned m=512 n=512 k=4096 at=1 bt=1 E=4 candidates=5 winner=3 id=31 tile=18 split=1 us=85.2480\nLT tuned m=4096 n=512 k=512 at=0 bt=1 E=4 candidates=8 winner=0 id=6 tile=20 split=1 us=54.5280\nLT tuned m=512 n=128 k=4096 at=1 bt=1 E=4 candidates=5 winner=0 id=31 tile=15 split=1 us=24.1493\nLT tuned m=20000 n=512 k=128 at=0 bt=0 E=4 candidates=8 winner=0 id=6 tile=20 split=1 us=110.2507\nLT tuned m=20000 n=512 k=512 at=0 bt=0 E=4 candidates=8 winner=0 id=6 tile=20 split=1 us=233.4720\nLT tuned m=20000 n=16 k=512 at=0 bt=1 E=4 candidates=8 winner=0 id=6 tile=17 split=1 us=62.7200\n[1/3] /usr/local/cuda/bin/nvcc -MD -MF centered_halfnorm_small_members.cuda.o.d -DTORCH_EXTENSION_NAME=sutro_centered_halfnorm_small_members_bn_stagepack -DTORCH_API_INCLUDE_EXTENSION_H -isystem /usr/local/lib/python3.13/site-packages/torch/include -isystem /usr/local/lib/python3.13/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /usr/local/include/python3.13 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_80,code=sm_80 --compiler-options '-fPIC' -O3 -lineinfo --ptxas-options=-v -std=c++20 -c /tmp/sutro-6fba3f88b7a9da8a-65534/kernels/centered_halfnorm_small_members.cu -o centered_halfnorm_small_members.cuda.o \nptxas info    : 0 bytes gmem\nptxas info    : Compiling entry function '_Z9transformILi8EEvPK13__nv_bfloat16S2_PKfPS0_i' for 'sm_80'\nptxas info    : Function properties for _Z9transformILi8EEvPK13__nv_bfloat16S2_PKfPS0_i\n    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 50 registers, used 1 barriers, 68 bytes smem, 388 bytes cmem[0]\nptxas info    : Compile time = 29.743 ms\nptxas info    : Compiling entry function '_Z9transformILi4EEvPK13__nv_bfloat16S2_PKfPS0_i' for 'sm_80'\nptxas info    : Function properties for _Z9transformILi4EEvPK13__nv_bfloat16S2_PKfPS0_i\n    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 32 registers, used 1 barriers, 36 bytes smem, 388 bytes cmem[0]\nptxas info    : Compile time = 17.134 ms\nptxas info    : Compiling entry function '_Z9transformILi2EEvPK13__nv_bfloat16S2_PKfPS0_i' for 'sm_80'\nptxas info    : Function properties for _Z9transformILi2EEvPK13__nv_bfloat16S2_PKfPS0_i\n    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 32 registers, used 1 barriers, 20 bytes smem, 388 bytes cmem[0]\nptxas info    : Compile time = 16.944 ms\nptxas info    : Compiling entry function '_Z9transformILi1EEvPK13__nv_bfloat16S2_PKfPS0_i' for 'sm_80'\nptxas info    : Function properties for _Z9transformILi1EEvPK13__nv_bfloat16S2_PKfPS0_i\n    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 32 registers, used 1 barriers, 12 bytes smem, 388 bytes cmem[0]\nptxas info    : Compile time = 15.445 ms\nptxas info    : Compiling entry function '_Z11finish_meanPKfPfiii' for 'sm_80'\nptxas info    : Function properties for _Z11finish_meanPKfPfiii\n    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 32 registers, used 0 barriers, 380 bytes cmem[0]\nptxas info    : Compile time = 10.979 ms\nptxas info    : Compiling entry function '_Z12partial_meanPK13__nv_bfloat16S1_Pfiiii' for 'sm_80'\nptxas info    : Function properties for _Z12partial_meanPK13__nv_bfloat16S1_Pfiiii\n    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads\nptxas info    : Used 32 registers, used 1 barriers, 1024 bytes smem, 392 bytes cmem[0]\nptxas info    : Compile time = 8.596 ms\n[2/3] c++ -MMD -MF centered_halfnorm_small_members_bindings.o.d -DTORCH_EXTENSION_NAME=sutro_centered_halfnorm_small_members_bn_stagepack -DTORCH_API_INCLUDE_EXTENSION_H -isystem /usr/local/lib/python3.13/site-packages/torch/include -isystem /usr/local/lib/python3.13/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /usr/local/include/python3.13 -fPIC -std=c++20 -O0 -g0 -c /tmp/sutro-6fba3f88b7a9da8a-65534/kernels/centered_halfnorm_small_members_bindings.cpp -o centered_halfnorm_small_members_bindings.o \n[3/3] c++ centered_halfnorm_small_members_bindings.o centered_halfnorm_small_members.cuda.o -shared -L/usr/local/lib/python3.13/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart -o sutro_centered_halfnorm_small_members_bn_stagepack.so\n",
+  "record": {
+    "version": "mnist-a100/1.2.0 (protections of sutro-mnist-medium/3.0.0, tightened; energy column)",
+    "file": "mlp_bn_head16_d5_warmstart_grokfast_noise04.py",
+    "function": "classify",
+    "source_sha256": "aa028894701ef993382393307af1f7c4e4dd4505b1f329b268e5272eac05b4f7",
+    "band_bp": 190,
+    "sandboxed": true,
+    "holdout": "fashion",
+    "device": "NVIDIA A100-SXM4-80GB",
+    "torch": "2.12.0+cu130",
+    "calls": [
+      {
+        "dataset": "mnist",
+        "ms": 3536.759765625,
+        "parent_ms": 3543.096487,
+        "correct": 9789,
+        "total": 10000,
+        "overhead_ms": 2.975423499125469
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3535.681640625,
+        "parent_ms": 3542.755147000008,
+        "correct": 9782,
+        "total": 10000,
+        "overhead_ms": 3.070595997917394
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3530.743896484375,
+        "parent_ms": 3537.2122629999867,
+        "correct": 9814,
+        "total": 10000,
+        "overhead_ms": 3.63042899772654
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3524.998046875,
+        "parent_ms": 3531.145422999998,
+        "correct": 9814,
+        "total": 10000,
+        "overhead_ms": 3.3556225001691473
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3550.963623046875,
+        "parent_ms": 3557.4301290000108,
+        "correct": 9794,
+        "total": 10000,
+        "overhead_ms": 3.4460194998016505
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3549.529052734375,
+        "parent_ms": 3555.8546969999725,
+        "correct": 9802,
+        "total": 10000,
+        "overhead_ms": 3.1594344988234297
+      },
+      {
+        "dataset": "fashion",
+        "ms": 3552.36865234375,
+        "parent_ms": 3558.99326399998,
+        "correct": 8888,
+        "total": 10000,
+        "overhead_ms": 3.341889000330866
+      },
+      {
+        "dataset": "fashion",
+        "ms": 3529.457763671875,
+        "parent_ms": 3536.165793000009,
+        "correct": 8828,
+        "total": 10000,
+        "overhead_ms": 3.633661501899269
+      },
+      {
+        "dataset": "fashion",
+        "ms": 3530.388427734375,
+        "parent_ms": 3536.607568000022,
+        "correct": 8813,
+        "total": 10000,
+        "overhead_ms": 3.4365619987893297
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3545.230224609375,
+        "parent_ms": 3551.3157720000663,
+        "correct": 9821,
+        "total": 10000,
+        "overhead_ms": 3.580125000867156
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3526.50146484375,
+        "parent_ms": 3532.7759009999227,
+        "correct": 9799,
+        "total": 10000,
+        "overhead_ms": 3.1974245014471308
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3537.534912109375,
+        "parent_ms": 3544.3050560000984,
+        "correct": 9808,
+        "total": 10000,
+        "overhead_ms": 3.8558709987837574
+      },
+      {
+        "dataset": "fashion",
+        "ms": 3543.816162109375,
+        "parent_ms": 3550.0741419999713,
+        "correct": 8857,
+        "total": 10000,
+        "overhead_ms": 3.427814500520981
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3545.193359375,
+        "parent_ms": 3551.432423999927,
+        "correct": 9795,
+        "total": 10000,
+        "overhead_ms": 3.1196804997389336
+      },
+      {
+        "dataset": "mnist",
+        "ms": 3549.641845703125,
+        "parent_ms": 3557.5858810000227,
+        "correct": 9782,
+        "total": 10000,
+        "overhead_ms": 3.4991100001948325
+      }
+    ],
+    "problems": [
+      "MNIST accuracy 98.000% (107,800/110,000); the band needs 107,910 correct"
+    ],
+    "summary": "MNIST 98.00% (107,800/110,000), 3539.343 ms/call; hold-out (fashion) 88.47%, 3539.008 ms/call",
+    "ranked_ms": null
+  }
+}

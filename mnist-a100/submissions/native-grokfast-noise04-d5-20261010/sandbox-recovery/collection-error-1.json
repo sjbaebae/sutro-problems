@@ -1,0 +1,10 @@
+{
+  "exception": "TimeoutError",
+  "message": "",
+  "call": {
+    "run": 1,
+    "function_call_id": "fc-01M4MG3D15WA3FCXP50JES0QPM"
+  },
+  "resolved": true,
+  "resolution": "Collector initially caught Modal TimeoutError but SDK polling raised builtin TimeoutError. Catch corrected; same three detached call handles resumed. No evaluation relaunched or replaced."
+}

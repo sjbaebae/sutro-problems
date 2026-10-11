@@ -1,0 +1,25 @@
+{
+  "source": "/Users/sbae703/Research/cybertronai/sutro-problems/mnista100/submissions/mlp_bn_head16_d5_warmstart_grokfast_noise04.py",
+  "source_sha256": "aa028894701ef993382393307af1f7c4e4dd4505b1f329b268e5272eac05b4f7",
+  "source_bytes": 20457,
+  "difficulty": 5,
+  "sandbox": "required",
+  "calls": [
+    {
+      "run": 1,
+      "function_call_id": "fc-01M4MG3D15WA3FCXP50JES0QPM"
+    },
+    {
+      "run": 2,
+      "function_call_id": "fc-01M4MG3DBBNZJRPV77Y8AE6QAA"
+    },
+    {
+      "run": 3,
+      "function_call_id": "fc-01M4MG3DQ5F2QSYTF5X2SSER2F"
+    }
+  ],
+  "runner": "unchanged run_modal.remote_score, three independent single-use A100 containers",
+  "prior_attempt": "../modal-d5-warmstart-grokfast-noise04-initial-20261010/infrastructure-audit.json",
+  "scope": "Explicitly authorized recovery batch after disk failure; prior unknown outcomes disclosed, no claim that this was first-ever attempt.",
+  "app_id": "ap-y1dE3LijUQupJdUMJCS5Ho"
+}

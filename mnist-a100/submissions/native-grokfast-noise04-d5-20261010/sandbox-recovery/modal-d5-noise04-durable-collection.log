@@ -1,0 +1,4 @@
+{"run": 1, "returncode": 1, "summary": "MNIST 98.09% (107,901/110,000), 3532.250 ms/call; hold-out (kmnist) 97.27%, 3538.794 ms/call", "problems": ["MNIST accuracy 98.092% (107,901/110,000); the band needs 107,910 correct"], "ranked_ms": null}
+{"run": 2, "returncode": 1, "summary": "MNIST 98.00% (107,800/110,000), 3539.343 ms/call; hold-out (fashion) 88.47%, 3539.008 ms/call", "problems": ["MNIST accuracy 98.000% (107,800/110,000); the band needs 107,910 correct"], "ranked_ms": null}
+{"run": 3, "returncode": 0, "summary": "MNIST 98.12% (107,928/110,000), 3541.172 ms/call; hold-out (fashion) 88.39%, 3536.121 ms/call", "problems": [], "ranked_ms": 3541.1724076704545}
+All three original recovery-batch outputs saved.
